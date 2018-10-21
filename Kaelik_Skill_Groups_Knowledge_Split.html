@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Kaelik Skill Groups</title>
+</head>
+
+<body>
+</body>
+<script>
+var leftColumn = document.createElement("div");
+leftColumn.style.position = "absolute";
+leftColumn.style.left = "0";
+leftColumn.style.marginLeft = "0.25em";
+document.body.appendChild(leftColumn);
+var Skill = /** @class */ (function () {
+    function Skill(name) {
+        this.name = name;
+        this.ranks = {};
+    }
+    Object.defineProperty(Skill.prototype, "totalRanks", {
+        get: function () {
+            var output = 0;
+            for (var key in this.ranks) {
+                output += +this.ranks[key];
+            }
+            return output;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ;
+    return Skill;
+}());
+var skills = {};
+for (var _i = 0, _a = []; _i < _a.length; _i++) {
+    var skillName = _a[_i];
+    var skill = new Skill(skillName);
+    skills[skillName] = skill;
+}
+var skillsContainer = document.createElement("div");
+skillsContainer.style.position = "absolute";
+skillsContainer.style.right = "0";
+skillsContainer.style.paddingRight = "2em";
+document.body.appendChild(skillsContainer);
+var skillsHeading = document.createElement("h2");
+skillsHeading.innerText = "Final Skill Ranks";
+skillsContainer.appendChild(skillsHeading);
+var tableElement = document.createElement("div");
+tableElement.style.display = "table";
+skillsContainer.appendChild(tableElement);
+var renderSkillsTable = function () {
+    tableElement.innerHTML = "";
+    var skillsArray = [];
+    for (var skillName in skills) {
+        skillsArray.push(skills[skillName]);
+    }
+    skillsArray.sort(function (a, b) {
+        if (a.name < b.name) {
+            return -1;
+        }
+        else if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+    });
+    var _loop_1 = function (skill) {
+        var row = document.createElement("div");
+        row.style.display = "table-row";
+        var label = document.createElement("div");
+        label.style.display = "table-cell";
+        var expandButton = document.createElement('span');
+        expandButton.innerText = '➕';
+        expandButton.style.cursor = 'pointer';
+        label.appendChild(expandButton);
+        var skilNameLabel = document.createElement("span");
+        skilNameLabel.innerText = skill.name;
+        label.appendChild(skilNameLabel);
+        var groupDivs = [];
+        for (var groupName in skill.ranks) {
+            var groupDiv = document.createElement('div');
+            groupDiv.style.marginLeft = "2em";
+            groupDiv.innerText = groupName + ": " + skill.ranks[groupName];
+            label.appendChild(groupDiv);
+            groupDiv.hidden = true;
+            groupDivs.push(groupDiv);
+        }
+        expandButton.onclick = function () {
+            if (expandButton.innerText === '➕') {
+                expandButton.innerText = '➖';
+            }
+            else {
+                expandButton.innerText = '➕';
+            }
+            for (var _i = 0, groupDivs_1 = groupDivs; _i < groupDivs_1.length; _i++) {
+                var groupDiv = groupDivs_1[_i];
+                groupDiv.hidden = !groupDiv.hidden;
+            }
+        };
+        var counter = document.createElement("div");
+        counter.style.display = "table-cell";
+        counter.style.paddingLeft = "1em";
+        counter.style.paddingRight = "1em";
+        counter.innerText = "" + skill.totalRanks;
+        row.appendChild(label);
+        row.appendChild(counter);
+        tableElement.appendChild(row);
+    };
+    for (var _i = 0, skillsArray_1 = skillsArray; _i < skillsArray_1.length; _i++) {
+        var skill = skillsArray_1[_i];
+        _loop_1(skill);
+    }
+};
+var levelCounterCount = 0;
+var levelCounterContainer = document.createElement("div");
+leftColumn.appendChild(levelCounterContainer);
+var numberOfLevels = 1;
+var ranksPerGroup = 0;
+var intModRanks = 0;
+var levelCounters = [];
+var closuresOnRanksPerGroupChanges = [];
+var recalculateTotalRanks = function () {
+    var _ranksPerGroup = levelCounters[0].skillRanksPerLevelCounter.valueAsNumber * 1.5;
+    var _numberOfLevels = 0;
+    for (var _i = 0, levelCounters_1 = levelCounters; _i < levelCounters_1.length; _i++) {
+        var levelCounter = levelCounters_1[_i];
+        _ranksPerGroup += levelCounter.levelCounter.valueAsNumber *
+            levelCounter.skillRanksPerLevelCounter.valueAsNumber / 2;
+        _numberOfLevels += levelCounter.levelCounter.valueAsNumber;
+    }
+    ranksPerGroup = _ranksPerGroup;
+    numberOfLevels = _numberOfLevels;
+    for (var _a = 0, closuresOnRanksPerGroupChanges_1 = closuresOnRanksPerGroupChanges; _a < closuresOnRanksPerGroupChanges_1.length; _a++) {
+        var closure = closuresOnRanksPerGroupChanges_1[_a];
+        closure();
+    }
+};
+var addLevelCounter = function () {
+    var levelCounterRow = document.createElement("div");
+    var levelCounter = document.createElement("input");
+    levelCounterContainer.insertBefore(levelCounterRow, levelCounterContainer.lastChild);
+    levelCounterRow.appendChild(levelCounter);
+    var span0 = document.createElement("span");
+    span0.innerText = " level(s) with ";
+    levelCounterRow.appendChild(span0);
+    var skillRanksPerLevelCounter = document.createElement("input");
+    levelCounterRow.appendChild(skillRanksPerLevelCounter);
+    var span1 = document.createElement("span");
+    span1.innerText = " ranks per level";
+    levelCounterRow.appendChild(span1);
+    for (var _i = 0, _a = [levelCounter, skillRanksPerLevelCounter]; _i < _a.length; _i++) {
+        var inputElement = _a[_i];
+        inputElement.type = "number";
+        inputElement.step = "1";
+        inputElement.style.width = "3em";
+        inputElement.oninput = function () {
+            recalculateTotalRanks();
+        };
+    }
+    levelCounter.value = "1";
+    levelCounter.min = "1";
+    skillRanksPerLevelCounter.value = "0";
+    skillRanksPerLevelCounter.min = "0";
+    levelCounters.push({ "levelCounter": levelCounter, "skillRanksPerLevelCounter": skillRanksPerLevelCounter });
+    levelCounterCount++;
+    if (levelCounterCount > 1) {
+        var minusButton = document.createElement("button");
+        minusButton.innerText = "-";
+        levelCounterRow.appendChild(minusButton);
+        minusButton.onclick = function () {
+            levelCounterRow.remove();
+            levelCounterCount--;
+            levelCounters.splice(levelCounterCount);
+            recalculateTotalRanks();
+        };
+    }
+};
+addLevelCounter();
+var addLevelCounterButton = document.createElement("button");
+addLevelCounterButton.innerText = "+";
+addLevelCounterButton.onclick = function () {
+    addLevelCounter();
+};
+levelCounterContainer.appendChild(addLevelCounterButton);
+var ranksPerGroupDiv = document.createElement("div");
+leftColumn.appendChild(ranksPerGroupDiv);
+closuresOnRanksPerGroupChanges.push(function () {
+    ranksPerGroupDiv.innerText = "Number of Levels: " + numberOfLevels + ", Ranks per Group: " + ranksPerGroup;
+});
+var intModCounter = document.createElement("input");
+intModCounter.type = "number";
+intModCounter.value = "0";
+intModCounter.step = "0";
+intModCounter.style.width = "3em";
+var intModLabel = document.createElement("span");
+intModLabel.innerText = "Int Mod: ";
+var intModContainer = document.createElement("span");
+intModContainer.appendChild(intModLabel);
+intModContainer.appendChild(intModCounter);
+var intModRanksLabel = document.createElement("div");
+var intModRanksUsed = {};
+var calculateIntModRanksUsed = function () {
+    var output = 0;
+    for (var key in intModRanksUsed) {
+        output += intModRanksUsed[key];
+    }
+    return output;
+};
+var updateIntModRanksLabel = function () {
+    intModRanksLabel.textContent = "Int mod ranks: " + calculateIntModRanksUsed() + "/" + (numberOfLevels + 3) * Number(intModCounter.value);
+};
+updateIntModRanksLabel();
+intModContainer.appendChild(intModRanksLabel);
+closuresOnRanksPerGroupChanges.push(function () {
+    updateIntModRanksLabel();
+});
+intModCounter.oninput = function () {
+    updateIntModRanksLabel();
+};
+leftColumn.appendChild(intModContainer);
+var skillGroupContainersContainer = document.createElement("div");
+leftColumn.appendChild(skillGroupContainersContainer);
+var addSkillGroupButton = document.createElement("button");
+addSkillGroupButton.innerText = "+";
+skillGroupContainersContainer.appendChild(addSkillGroupButton);
+var SkillGroupType;
+(function (SkillGroupType) {
+    SkillGroupType[SkillGroupType["Normal"] = 0] = "Normal";
+    SkillGroupType[SkillGroupType["Bonus"] = 1] = "Bonus";
+    SkillGroupType[SkillGroupType["NotAGroup"] = 2] = "NotAGroup";
+})(SkillGroupType || (SkillGroupType = {}));
+var skillGroups = [];
+var updateSkills = function () {
+    skills = {};
+    for (var _i = 0, skillGroups_1 = skillGroups; _i < skillGroups_1.length; _i++) {
+        var skillGroup = skillGroups_1[_i];
+        if (skillGroup.skillNameInput.value === "") {
+            continue;
+        }
+        if (skills[skillGroup.skillNameInput.value] == null) {
+            var skill = new Skill(skillGroup.skillNameInput.value);
+            skill.ranks[skillGroup.skillGroupHeading.value] = Number(skillGroup.skillRanksInput.value);
+            skills[skillGroup.skillNameInput.value] = skill;
+        }
+        else {
+            skills[skillGroup.skillNameInput.value].ranks[skillGroup.skillGroupHeading.value] = Number(skillGroup.skillRanksInput.value);
+        }
+    }
+    renderSkillsTable();
+};
+var addSkillGroup = function (groupType, groupName) {
+    var skillNames = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        skillNames[_i - 2] = arguments[_i];
+    }
+    var skillGroupContainer = document.createElement("div");
+    skillGroupContainer.style.padding = '1em';
+    skillGroupContainersContainer.insertBefore(skillGroupContainer, addSkillGroupButton);
+    var totalRanksInGroup = 0;
+    var skillGroupHeading = document.createElement("input");
+    skillGroupHeading.value = groupName;
+    skillGroupContainer.appendChild(skillGroupHeading);
+    var addRowButton = document.createElement("button");
+    addRowButton.innerText = "+";
+    skillGroupContainer.appendChild(addRowButton);
+    var totalGroupRanksDiv = document.createElement('div');
+    var rankCounters = [];
+    var updateTotalRanksInGroup = function () {
+        if (groupType === SkillGroupType.Bonus) {
+            return;
+        }
+        intModRanksUsed[groupName] = 0;
+        totalRanksInGroup = 0;
+        for (var _i = 0, rankCounters_1 = rankCounters; _i < rankCounters_1.length; _i++) {
+            var rankCounter = rankCounters_1[_i];
+            totalRanksInGroup += Number(rankCounter.value);
+        }
+        if (groupType === SkillGroupType.NotAGroup) {
+            totalGroupRanksDiv.innerText = "Int Mod Ranks: " + totalRanksInGroup;
+            intModRanksUsed[groupName] = totalRanksInGroup;
+        }
+        else {
+            intModRanksUsed[groupName] = totalRanksInGroup - ranksPerGroup;
+            if (totalRanksInGroup > ranksPerGroup) {
+                totalGroupRanksDiv.innerText = "Total Ranks in group: " + ranksPerGroup + "/" + ranksPerGroup + ", Int Mod Ranks: " + (totalRanksInGroup - ranksPerGroup);
+            }
+            else {
+                totalGroupRanksDiv.innerText = "Total Ranks in group: " + totalRanksInGroup + "/" + ranksPerGroup;
+            }
+        }
+        updateIntModRanksLabel();
+    };
+    updateTotalRanksInGroup();
+    closuresOnRanksPerGroupChanges.push(function () {
+        updateTotalRanksInGroup();
+    });
+    var addRow = function (skillName) {
+        var row = document.createElement("div");
+        row.style.marginLeft = '1em';
+        var skillNameInput = document.createElement("input");
+        var skillRanksInput = document.createElement("input");
+        var maxRanksButton = document.createElement("button");
+        var clearRanksButton = document.createElement("button");
+        maxRanksButton.innerText = "Max";
+        clearRanksButton.innerText = "Clear";
+        skillRanksInput.type = "number";
+        skillRanksInput.step = "1";
+        skillRanksInput.min = "0";
+        skillRanksInput.style.width = "3em";
+        skillRanksInput.defaultValue = "0";
+        skillNameInput.value = skillName;
+        row.appendChild(skillNameInput);
+        row.appendChild(skillRanksInput);
+        row.appendChild(maxRanksButton);
+        row.appendChild(clearRanksButton);
+        skillGroups.push({
+            skillNameInput: skillNameInput,
+            skillRanksInput: skillRanksInput,
+            skillGroupHeading: skillGroupHeading
+        });
+        rankCounters.push(skillRanksInput);
+
+        maxRanksButton.onclick = function () {
+            skillRanksInput.value = "" + (numberOfLevels + 3);
+            updateSkills();
+            updateTotalRanksInGroup();
+        }
+
+        clearRanksButton.onclick = function () {
+            skillRanksInput.value = "0";
+            updateSkills();
+            updateTotalRanksInGroup();
+        }
+
+        row.oninput = function () {
+            updateSkills();
+            updateTotalRanksInGroup();
+        };
+        skillGroupContainer.insertBefore(row, addRowButton);
+    };
+    addRowButton.onclick = function (event) {
+        addRow("");
+    };
+    for (var _a = 0, skillNames_1 = skillNames; _a < skillNames_1.length; _a++) {
+        var skillName = skillNames_1[_a];
+        addRow(skillName);
+    }
+    if (groupType !== SkillGroupType.Bonus) {
+        skillGroupContainer.appendChild(totalGroupRanksDiv);
+    }
+};
+addSkillGroup(SkillGroupType.Bonus, "Bonus Ranks", "");
+addSkillGroup(SkillGroupType.NotAGroup, "Not a skill group", "Use Magic Device");
+addSkillGroup(SkillGroupType.Normal, "Perception", "Hide", "Move Silently", "Spot", "Listen", "Spellcraft", "Search", "Sense Motive");
+addSkillGroup(SkillGroupType.Normal, "Lore", "Knowledge (Arcana)", "Knowledge (Dungeoneering)", "Knowledge (Local)", "Knowledge (Nature)", "Knowledge (Religion)", "Knowledge (The planes)");
+addSkillGroup(SkillGroupType.Normal, "Trivia", "Knowledge (Architecture and engineering)", "Knowledge (Geography)", "Knowledge (History)", "Knowledge (Local)", "Knowledge (Nobility and royalty)");
+addSkillGroup(SkillGroupType.Normal, "Skulduggery", "Sleight of Hand", "Use Rope", "Open Lock", "Disable Device", "Bluff", "Disguise");
+addSkillGroup(SkillGroupType.Normal, "Interaction", "Sense Motive", "Diplomacy", "Gather Information", "Heal", "Intimidate", "Speak Language");
+addSkillGroup(SkillGroupType.Normal, "Physical Fitness", "Balance", "Concentration", "Climb", "Escape Artist", "Jump", "Ride", "Tumble", "Swim");
+addSkillGroup(SkillGroupType.Normal, "Wilderness", "Handle Animal", "Survival", "Ride", "Swim", "Climb", "Jump", "Heal");
+addSkillGroup(SkillGroupType.Normal, "Civilization", "Appraise", "Craft ()", "Decipher Script", "Forgery", "Perform ()", "Profession ()");
+addSkillGroupButton.onclick = function (mouseEvent) {
+    addSkillGroup(SkillGroupType.Normal, "", "");
+};
+updateSkills();		
+</script>
+
+</html>
