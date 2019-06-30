@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Table Generator</title>
+</head>
+
+<body>
+</body>
+<script>
+    var inputDiv = document.createElement('div');
+document.body.appendChild(inputDiv);
+inputDiv.append("Levels: ");
+var levelEndInput = document.createElement('input');
+levelEndInput.type = 'number';
+levelEndInput.value = '20';
+levelEndInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(levelEndInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("BAB Offset: ");
+var babOffsetInput = document.createElement('input');
+babOffsetInput.type = 'number';
+babOffsetInput.value = '0';
+babOffsetInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(babOffsetInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("BAB Numerator: ");
+var babNumeratorInput = document.createElement('input');
+babNumeratorInput.type = 'number';
+babNumeratorInput.value = '1';
+babNumeratorInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(babNumeratorInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("BAB Denominator: ");
+var babDenominatorInput = document.createElement('input');
+babDenominatorInput.type = 'number';
+babDenominatorInput.value = '2';
+babDenominatorInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(babDenominatorInput);
+inputDiv.appendChild(document.createElement('br'));
+//////////////
+var fullBABButton = document.createElement('button');
+fullBABButton.innerText = "Full BAB";
+fullBABButton.addEventListener('click', function () {
+    babOffsetInput.value = '0';
+    babNumeratorInput.value = '1';
+    babDenominatorInput.value = '1';
+    generate();
+});
+inputDiv.appendChild(fullBABButton);
+var mediumBABButton = document.createElement('button');
+mediumBABButton.innerText = "Medium BAB";
+mediumBABButton.addEventListener('click', function () {
+    babOffsetInput.value = '0';
+    babNumeratorInput.value = '3';
+    babDenominatorInput.value = '4';
+    generate();
+});
+inputDiv.appendChild(mediumBABButton);
+var halfBABButton = document.createElement('button');
+halfBABButton.innerText = "Half BAB";
+halfBABButton.addEventListener('click', function () {
+    babOffsetInput.value = '0';
+    babNumeratorInput.value = '1';
+    babDenominatorInput.value = '2';
+    generate();
+});
+inputDiv.appendChild(halfBABButton);
+inputDiv.appendChild(document.createElement('br'));
+//////////////
+inputDiv.append("Fort Offset: ");
+var fortOffsetInput = document.createElement('input');
+fortOffsetInput.type = 'number';
+fortOffsetInput.value = '0';
+fortOffsetInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(fortOffsetInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("Fort Numerator: ");
+var fortNumeratorInput = document.createElement('input');
+fortNumeratorInput.type = 'number';
+fortNumeratorInput.value = '1';
+fortNumeratorInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(fortNumeratorInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("Fortitude Denominator: ");
+var fortDenominatorInput = document.createElement('input');
+fortDenominatorInput.type = 'number';
+fortDenominatorInput.value = '3';
+fortDenominatorInput.addEventListener('change', function () {
+    generate();
+});
+//////////////
+var goodFort = document.createElement('button');
+goodFort.innerText = "Good Fort";
+goodFort.addEventListener('click', function () {
+    fortOffsetInput.value = '2';
+    fortNumeratorInput.value = '1';
+    fortDenominatorInput.value = '2';
+    generate();
+});
+inputDiv.appendChild(goodFort);
+var badFort = document.createElement('button');
+badFort.innerText = "Bad Fort";
+badFort.addEventListener('click', function () {
+    fortOffsetInput.value = '0';
+    fortNumeratorInput.value = '1';
+    fortDenominatorInput.value = '3';
+    generate();
+});
+inputDiv.appendChild(goodFort);
+inputDiv.appendChild(badFort);
+inputDiv.appendChild(document.createElement('br'));
+//////////////
+inputDiv.appendChild(fortDenominatorInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("Reflex Offset: ");
+var reflexOffsetInput = document.createElement('input');
+reflexOffsetInput.type = 'number';
+reflexOffsetInput.value = '0';
+reflexOffsetInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(reflexOffsetInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("Reflex Numerator: ");
+var reflexNumeratorInput = document.createElement('input');
+reflexNumeratorInput.type = 'number';
+reflexNumeratorInput.value = '1';
+reflexNumeratorInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(reflexNumeratorInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("Reflex Denominator: ");
+var reflexDenominatorInput = document.createElement('input');
+reflexDenominatorInput.type = 'number';
+reflexDenominatorInput.value = '3';
+reflexDenominatorInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(reflexDenominatorInput);
+inputDiv.appendChild(document.createElement('br'));
+//////////////
+var goodreflex = document.createElement('button');
+goodreflex.innerText = "Good Reflex";
+goodreflex.addEventListener('click', function () {
+    reflexOffsetInput.value = '2';
+    reflexNumeratorInput.value = '1';
+    reflexDenominatorInput.value = '2';
+    generate();
+});
+inputDiv.appendChild(goodreflex);
+var badreflex = document.createElement('button');
+badreflex.innerText = "Bad Reflex";
+badreflex.addEventListener('click', function () {
+    reflexOffsetInput.value = '0';
+    reflexNumeratorInput.value = '1';
+    reflexDenominatorInput.value = '3';
+    generate();
+});
+inputDiv.appendChild(goodreflex);
+inputDiv.appendChild(badreflex);
+inputDiv.appendChild(document.createElement('br'));
+//////////////
+inputDiv.append("Will Offset: ");
+var willOffsetInput = document.createElement('input');
+willOffsetInput.type = 'number';
+willOffsetInput.value = '0';
+willOffsetInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(willOffsetInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("Will Numerator: ");
+var willNumeratorInput = document.createElement('input');
+willNumeratorInput.type = 'number';
+willNumeratorInput.value = '1';
+willNumeratorInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(willNumeratorInput);
+inputDiv.appendChild(document.createElement('br'));
+inputDiv.append("Will Denominator: ");
+var willDenominatorInput = document.createElement('input');
+willDenominatorInput.type = 'number';
+willDenominatorInput.value = '3';
+willDenominatorInput.addEventListener('change', function () {
+    generate();
+});
+inputDiv.appendChild(willDenominatorInput);
+inputDiv.appendChild(document.createElement('br'));
+var extraColumnsInput = document.createElement('input');
+extraColumnsInput.type = 'number';
+extraColumnsInput.value = '0';
+extraColumnsInput.addEventListener('change', function () {
+    generate();
+});
+//////////////
+var goodwill = document.createElement('button');
+goodwill.innerText = "Good Will";
+goodwill.addEventListener('click', function () {
+    willOffsetInput.value = '2';
+    willNumeratorInput.value = '1';
+    willDenominatorInput.value = '2';
+    generate();
+});
+inputDiv.appendChild(goodwill);
+var badwill = document.createElement('button');
+badwill.innerText = "Bad Will";
+badwill.addEventListener('click', function () {
+    willOffsetInput.value = '0';
+    willNumeratorInput.value = '1';
+    willDenominatorInput.value = '3';
+    generate();
+});
+inputDiv.appendChild(goodwill);
+inputDiv.appendChild(badwill);
+inputDiv.appendChild(document.createElement('br'));
+//////////////
+inputDiv.append("Extra Columns: ");
+inputDiv.appendChild(extraColumnsInput);
+inputDiv.appendChild(document.createElement('br'));
+var outuptDiv = document.createElement('div');
+document.body.appendChild(outuptDiv);
+function generate() {
+    var levelEnd = Number(levelEndInput.value);
+    var babOffset = Number(babOffsetInput.value);
+    var babNumerator = Number(babNumeratorInput.value);
+    var babDenominator = Number(babDenominatorInput.value);
+    var fortOffset = Number(fortOffsetInput.value);
+    var fortNumerator = Number(fortNumeratorInput.value);
+    var fortDenominator = Number(fortDenominatorInput.value);
+    var reflexOffset = Number(reflexOffsetInput.value);
+    var reflexNumerator = Number(reflexNumeratorInput.value);
+    var reflexDenominator = Number(reflexDenominatorInput.value);
+    var willOffset = Number(willOffsetInput.value);
+    var willNumerator = Number(willNumeratorInput.value);
+    var willDenominator = Number(willDenominatorInput.value);
+    var extraColumns = Number(extraColumnsInput.value);
+    var outputString = "";
+    for (var i = 1; i <= levelEnd; i++) {
+        var suffix = "";
+        switch (i) {
+            case 1:
+                suffix = "st";
+                break;
+            case 2:
+                suffix = "nd";
+                break;
+            case 3:
+                suffix = "rd";
+                break;
+            default:
+                suffix = "th";
+        }
+        var extraColumnsString = "|&nbsp&nbsp&nbsp";
+        for (var i_1 = 0; i_1 < extraColumns; i_1++) {
+            extraColumnsString = extraColumnsString + " |&nbsp&nbsp&nbsp|";
+        }
+        outputString =
+            outputString + "\n    <br>|-\n    |" + i + suffix + "||class=\"left\" | +" + Math.floor(babOffset + i * babNumerator / babDenominator) + " || +" + Math.floor(fortOffset + i * fortNumerator / fortDenominator) + " || +" + Math.floor(reflexOffset + i * reflexNumerator / reflexDenominator) + " || +" + Math.floor(willOffset + i * willNumerator / willDenominator) + "\n    " + extraColumnsString + "-\n    ";
+    }
+    outuptDiv.innerHTML = outputString;
+}
+generate();
+
+</script>
+
+</html>
