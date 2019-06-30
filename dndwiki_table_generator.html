@@ -103,6 +103,8 @@ fortDenominatorInput.value = '3';
 fortDenominatorInput.addEventListener('change', function () {
     generate();
 });
+inputDiv.appendChild(fortDenominatorInput);
+inputDiv.appendChild(document.createElement('br'));
 //////////////
 var goodFort = document.createElement('button');
 goodFort.innerText = "Good Fort";
@@ -125,8 +127,6 @@ inputDiv.appendChild(goodFort);
 inputDiv.appendChild(badFort);
 inputDiv.appendChild(document.createElement('br'));
 //////////////
-inputDiv.appendChild(fortDenominatorInput);
-inputDiv.appendChild(document.createElement('br'));
 inputDiv.append("Reflex Offset: ");
 var reflexOffsetInput = document.createElement('input');
 reflexOffsetInput.type = 'number';
