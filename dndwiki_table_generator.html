@@ -10,7 +10,7 @@
 <body>
 </body>
 <script>
-    var inputDiv = document.createElement('div');
+var inputDiv = document.createElement('div');
 document.body.appendChild(inputDiv);
 inputDiv.append("Levels: ");
 var levelEndInput = document.createElement('input');
@@ -254,25 +254,44 @@ function generate() {
     var outputString = "";
     for (var i = 1; i <= levelEnd; i++) {
         var suffix = "";
-        switch (i) {
-            case 1:
-                suffix = "st";
-                break;
-            case 2:
-                suffix = "nd";
-                break;
-            case 3:
-                suffix = "rd";
+        switch (i % 11) {
+            case 11:
+            case 12:
+            case 13:
+                suffix = "th";
                 break;
             default:
-                suffix = "th";
+                switch (i % 10) {
+                    case 1:
+                        suffix = "st";
+                        break;
+                    case 2:
+                        suffix = "nd";
+                        break;
+                    case 3:
+                        suffix = "rd";
+                        break;
+                    default:
+                        suffix = "th";
+                }
         }
         var extraColumnsString = "|&nbsp&nbsp&nbsp";
         for (var i_1 = 0; i_1 < extraColumns; i_1++) {
             extraColumnsString = extraColumnsString + " |&nbsp&nbsp&nbsp|";
         }
+        var bab = Math.floor(babOffset + i * babNumerator / babDenominator);
+        var babString = "+" + Math.floor(babOffset + i * babNumerator / babDenominator);
+        if (bab >= 6) {
+            babString = babString + "/+" + (bab - 5);
+        }
+        if (bab >= 11) {
+            babString = babString + "/+" + (bab - 10);
+        }
+        if (bab >= 16) {
+            babString = babString + "/+" + (bab - 15);
+        }
         outputString =
-            outputString + "\n    <br>|-\n    |" + i + suffix + "||class=\"left\" | +" + Math.floor(babOffset + i * babNumerator / babDenominator) + " || +" + Math.floor(fortOffset + i * fortNumerator / fortDenominator) + " || +" + Math.floor(reflexOffset + i * reflexNumerator / reflexDenominator) + " || +" + Math.floor(willOffset + i * willNumerator / willDenominator) + "\n    " + extraColumnsString + "-\n    ";
+            outputString + "\n    <br>|-\n    |" + i + suffix + "||class=\"left\" | " + babString + " || +" + Math.floor(fortOffset + i * fortNumerator / fortDenominator) + " || +" + Math.floor(reflexOffset + i * reflexNumerator / reflexDenominator) + " || +" + Math.floor(willOffset + i * willNumerator / willDenominator) + "\n    " + extraColumnsString + "-\n    ";
     }
     outuptDiv.innerHTML = outputString;
 }
