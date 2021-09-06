@@ -1374,74 +1374,68 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         lineNumber: 615,
         columnNumber: 17
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-          style: {
-            paddingLeft: '15px',
-            paddingRight: '15px'
-          },
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
-            children: "Forward Cast"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 685,
-            columnNumber: 25
-          }, this), forward]
-        }, void 0, true, {
+        style: {
+          paddingLeft: '15px',
+          paddingRight: '15px'
+        },
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
+          children: "Forward Cast"
+        }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 684,
+          lineNumber: 685,
           columnNumber: 21
-        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-          style: {
-            paddingLeft: '15px',
-            paddingRight: '15px'
-          },
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
-            children: "Area Cast"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 689,
-            columnNumber: 25
-          }, this), area]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 688,
-          columnNumber: 21
-        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-          style: {
-            paddingLeft: '15px',
-            paddingRight: '15px'
-          },
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
-            children: "Weapon Cast"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 693,
-            columnNumber: 25
-          }, this), weapon]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 692,
-          columnNumber: 21
-        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-          style: {
-            paddingLeft: '15px',
-            paddingRight: '15px'
-          },
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
-            children: "Self Cast"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 697,
-            columnNumber: 25
-          }, this), self]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 696,
-          columnNumber: 21
-        }, this)]
+        }, this), forward]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 683,
+        lineNumber: 684,
+        columnNumber: 17
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        style: {
+          paddingLeft: '15px',
+          paddingRight: '15px'
+        },
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
+          children: "Area Cast"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 689,
+          columnNumber: 21
+        }, this), area]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 688,
+        columnNumber: 17
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        style: {
+          paddingLeft: '15px',
+          paddingRight: '15px'
+        },
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
+          children: "Weapon Cast"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 693,
+          columnNumber: 21
+        }, this), weapon]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 692,
+        columnNumber: 17
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        style: {
+          paddingLeft: '15px',
+          paddingRight: '15px'
+        },
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
+          children: "Self Cast"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 697,
+          columnNumber: 21
+        }, this), self]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 696,
         columnNumber: 17
       }, this)]
     }, void 0, true, {
@@ -1533,4 +1527,4 @@ if (true) {
 /***/ })
 
 })
-//# sourceMappingURL=main.803aca858a23e18698f2.hot-update.js.map
+//# sourceMappingURL=main.acc83ef49d4eeead5413.hot-update.js.map

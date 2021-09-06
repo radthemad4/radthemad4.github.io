@@ -1147,9 +1147,6 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     }
 
     return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-      style: {
-        display: 'flex'
-      },
       children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         style: {
           paddingLeft: '5px',
@@ -1533,4 +1530,4 @@ if (true) {
 /***/ })
 
 })
-//# sourceMappingURL=main.803aca858a23e18698f2.hot-update.js.map
+//# sourceMappingURL=main.0e26de66b588ff667f00.hot-update.js.map

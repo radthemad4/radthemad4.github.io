@@ -257,25 +257,25 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   render() {
     let forward = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("span", {}, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 272,
+      lineNumber: 271,
       columnNumber: 36
     }, this);
 
     let area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("span", {}, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 273,
+      lineNumber: 272,
       columnNumber: 33
     }, this);
 
     let weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("span", {}, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 273,
       columnNumber: 35
     }, this);
 
     let self = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("span", {}, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 275,
+      lineNumber: 274,
       columnNumber: 33
     }, this);
 
@@ -297,32 +297,219 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
     if (this.state.spellBar.length === 0) {
       // No Elements
-      forward = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
-          children: "Wind Burst"
-        }, void 0, false, {
+      const func = areaCast => {
+        return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("b", {
+            style: {
+              fontSize: 'larger'
+            },
+            children: "Wind Burst"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 299,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 299,
+            columnNumber: 69
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("b", {
+            children: "Casting Time:"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 300,
+            columnNumber: 21
+          }, this), " See text", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 300,
+            columnNumber: 50
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("b", {
+            children: "Range:"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 301,
+            columnNumber: 21
+          }, this), " ", areaCast ? 'Centered on you, see text' : 'See text', /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 301,
+            columnNumber: 88
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("b", {
+            children: "Area:"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 302,
+            columnNumber: 21
+          }, this), " ", areaCast ? 'Radial Burst' : 'Cone Shaped Burst', ", see text", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 302,
+            columnNumber: 93
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("b", {
+            children: "Duration:"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 303,
+            columnNumber: 21
+          }, this), " Instantaneous", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 303,
+            columnNumber: 51
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("b", {
+            children: "Saving Throw:"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 304,
+            columnNumber: 21
+          }, this), " Fortitude Negates (object)", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 304,
+            columnNumber: 68
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 305,
+            columnNumber: 21
+          }, this), "Creates a blast of air that originates from you, affecting all creatures in its path. If cast as a full round action, the wind force is one category stronger and has double the range. If cast as a swift action, the wind force is one category weaker and has half the range.", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 307,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 307,
+            columnNumber: 27
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("table", {
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("tr", {
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("th", {
+                children: "Caster Level"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 309,
+                columnNumber: 29
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("th", {
+                children: "Default Wind Force"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 309,
+                columnNumber: 50
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("th", {
+                children: "Range"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 309,
+                columnNumber: 77
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 309,
+              columnNumber: 25
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("tr", {
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: "1"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 310,
+                columnNumber: 29
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: "Strong"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 310,
+                columnNumber: 39
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: [areaCast ? 15 : 30, " ft"]
+              }, void 0, true, {
+                fileName: _jsxFileName,
+                lineNumber: 310,
+                columnNumber: 54
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 310,
+              columnNumber: 25
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("tr", {
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: "5"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 311,
+                columnNumber: 29
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: "Severe"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 311,
+                columnNumber: 39
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: [areaCast ? 30 : 60, " ft"]
+              }, void 0, true, {
+                fileName: _jsxFileName,
+                lineNumber: 311,
+                columnNumber: 54
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 311,
+              columnNumber: 25
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("tr", {
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: "10"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 312,
+                columnNumber: 29
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: "Windstorm"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 312,
+                columnNumber: 40
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: [areaCast ? 60 : 120, " ft"]
+              }, void 0, true, {
+                fileName: _jsxFileName,
+                lineNumber: 312,
+                columnNumber: 58
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 312,
+              columnNumber: 25
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("tr", {
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: "15"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 313,
+                columnNumber: 29
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: "Hurricane"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 313,
+                columnNumber: 40
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("td", {
+                children: [areaCast ? 120 : 240, " ft"]
+              }, void 0, true, {
+                fileName: _jsxFileName,
+                lineNumber: 313,
+                columnNumber: 58
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 313,
+              columnNumber: 25
+            }, this)]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 308,
+            columnNumber: 21
+          }, this)]
+        }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 300,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 299,
-        columnNumber: 17
-      }, this);
-      area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
-          children: "Wind Burst"
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 306,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 305,
-        columnNumber: 17
-      }, this);
+          lineNumber: 298,
+          columnNumber: 24
+        }, this);
+      };
+
+      forward = func(false);
+      area = func(true);
     } else if (this.state.spellBar.length === 1 && this.state.spellBar[0] === shield) {
       // Just Shield
       forward = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -330,12 +517,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: "Arc Shield"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 315,
+          lineNumber: 331,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 314,
+        lineNumber: 330,
         columnNumber: 17
       }, this);
       area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -343,12 +530,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: "Sphere Shield"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 321,
+          lineNumber: 337,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 320,
+        lineNumber: 336,
         columnNumber: 17
       }, this);
       weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -356,12 +543,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: "Wall Shield"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 327,
+          lineNumber: 343,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 326,
+        lineNumber: 342,
         columnNumber: 17
       }, this);
       self = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -369,12 +556,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: "Force Armor"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 333,
+          lineNumber: 349,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 332,
+        lineNumber: 348,
         columnNumber: 17
       }, this);
     } else if (this.shieldCount === 1) {
@@ -386,12 +573,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: [this.getElementNames(elementsExceptShield), " Armor"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 345,
+          lineNumber: 361,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 344,
+        lineNumber: 360,
         columnNumber: 17
       }, this);
 
@@ -404,12 +591,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Arc ", this.getElementNames(elementsExceptShieldAndEarth), " Earth Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 358,
+            lineNumber: 374,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 357,
+          lineNumber: 373,
           columnNumber: 21
         }, this);
         area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -417,12 +604,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Circular ", this.getElementNames(elementsExceptShieldAndEarth), " Earth Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 364,
+            lineNumber: 380,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 363,
+          lineNumber: 379,
           columnNumber: 21
         }, this);
         weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -430,12 +617,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Straight ", this.getElementNames(elementsExceptShieldAndEarth), " Earth Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 370,
+            lineNumber: 386,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 369,
+          lineNumber: 385,
           columnNumber: 21
         }, this);
       } else if (this.iceCount >= 1) {
@@ -447,12 +634,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Arc ", this.getElementNames(elementsExceptShieldAndIce), " Ice Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 382,
+            lineNumber: 398,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 381,
+          lineNumber: 397,
           columnNumber: 21
         }, this);
         area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -460,12 +647,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Circular ", this.getElementNames(elementsExceptShieldAndIce), " Ice Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 388,
+            lineNumber: 404,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 387,
+          lineNumber: 403,
           columnNumber: 21
         }, this);
         weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -473,12 +660,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Straight ", this.getElementNames(elementsExceptShieldAndIce), " Ice Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 394,
+            lineNumber: 410,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 393,
+          lineNumber: 409,
           columnNumber: 21
         }, this);
       } else if (this.arcaneCount >= 1 || this.lifeCount >= 1) {
@@ -488,12 +675,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Arc ", this.getElementNames(elementsExceptShield), " Mines"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 403,
+            lineNumber: 419,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 402,
+          lineNumber: 418,
           columnNumber: 21
         }, this);
         area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -501,12 +688,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Circular Surrounding ", this.getElementNames(elementsExceptShield), " Mines"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 409,
+            lineNumber: 425,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 408,
+          lineNumber: 424,
           columnNumber: 21
         }, this);
         weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -514,12 +701,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Straight Line ", this.getElementNames(elementsExceptShield), " Mines"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 415,
+            lineNumber: 431,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 414,
+          lineNumber: 430,
           columnNumber: 21
         }, this);
       } else {
@@ -529,12 +716,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Arc ", this.getElementNames(elementsExceptShield), " Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 424,
+            lineNumber: 440,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 423,
+          lineNumber: 439,
           columnNumber: 21
         }, this);
         area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -542,12 +729,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Circular Surrounding ", this.getElementNames(elementsExceptShield), " Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 430,
+            lineNumber: 446,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 429,
+          lineNumber: 445,
           columnNumber: 21
         }, this);
         weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -555,12 +742,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: ["Straight Line ", this.getElementNames(elementsExceptShield), " Wall"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 436,
+            lineNumber: 452,
             columnNumber: 25
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 435,
+          lineNumber: 451,
           columnNumber: 21
         }, this);
       }
@@ -571,12 +758,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: [this.getElementNames(elementsUsed), " Projectile"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 448,
+          lineNumber: 464,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 447,
+        lineNumber: 463,
         columnNumber: 17
       }, this);
       area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -584,12 +771,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: [this.getElementNames(elementsUsed), " Quake"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 454,
+          lineNumber: 470,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 453,
+        lineNumber: 469,
         columnNumber: 17
       }, this);
       weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -597,12 +784,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: [this.getElementNames(elementsUsed), " Fissure"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 460,
+          lineNumber: 476,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 459,
+        lineNumber: 475,
         columnNumber: 17
       }, this);
       self = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -610,57 +797,19 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: ["Drop ", this.getElementNames(elementsUsed), " on head"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 466,
+          lineNumber: 482,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 465,
+        lineNumber: 481,
         columnNumber: 17
       }, this);
     } else if (this.iceCount >= 1) {
+      // Barrage
       forward = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
           children: [this.getElementNames(elementsUsed), " Barrage"]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 474,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 473,
-        columnNumber: 17
-      }, this);
-      area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
-          children: [this.getElementNames(elementsUsed), " Spikes"]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 480,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 479,
-        columnNumber: 17
-      }, this);
-      weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
-          children: [this.getElementNames(elementsUsed), " Blade"]
-        }, void 0, true, {
-          fileName: _jsxFileName,
-          lineNumber: 486,
-          columnNumber: 21
-        }, this)
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 485,
-        columnNumber: 17
-      }, this);
-      self = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
-          children: ["Drop ", this.getElementNames(elementsUsed), " on head"]
         }, void 0, true, {
           fileName: _jsxFileName,
           lineNumber: 492,
@@ -671,18 +820,58 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         lineNumber: 491,
         columnNumber: 17
       }, this);
+      area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
+          children: [this.getElementNames(elementsUsed), " Spikes"]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 498,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 497,
+        columnNumber: 17
+      }, this);
+      weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
+          children: [this.getElementNames(elementsUsed), " Blade"]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 504,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 503,
+        columnNumber: 17
+      }, this);
+      self = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
+          children: ["Drop ", this.getElementNames(elementsUsed), " on head"]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 510,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 509,
+        columnNumber: 17
+      }, this);
     } else if (this.arcaneCount >= 1 || this.lifeCount >= 1) {
+      // Beam
       forward = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
           children: [this.getElementNames(elementsUsed), " Beam"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 499,
+          lineNumber: 519,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 498,
+        lineNumber: 518,
         columnNumber: 17
       }, this);
       area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -690,12 +879,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: [this.getElementNames(elementsUsed), " Burst"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 505,
+          lineNumber: 525,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 504,
+        lineNumber: 524,
         columnNumber: 17
       }, this);
       weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -703,12 +892,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: [this.getElementNames(elementsUsed), " Blade"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 511,
+          lineNumber: 531,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 510,
+        lineNumber: 530,
         columnNumber: 17
       }, this);
       self = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -716,52 +905,55 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: ["Use ", this.getElementNames(elementsUsed), " on self"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 517,
+          lineNumber: 537,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 516,
+        lineNumber: 536,
         columnNumber: 17
       }, this);
-    } else {
+    } else if (this.lightningCount >= 1 || this.steamCount === 0) {
+      // Lightning
+      let elementsExceptLightning = [...elementsUsed];
+      elementsExceptLightning.splice(elementsExceptLightning.findIndex(element => element === lightning), 1);
       forward = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
-          children: [this.getElementNames(elementsUsed), " Spray"]
+          children: [this.getElementNames(elementsExceptLightning), " Lightning"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 523,
+          lineNumber: 550,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 522,
+        lineNumber: 549,
         columnNumber: 17
       }, this);
       area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
-          children: [this.getElementNames(elementsUsed), " Area Spray"]
+          children: [this.getElementNames(elementsExceptLightning), " Area Lightning"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 529,
+          lineNumber: 556,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 528,
+        lineNumber: 555,
         columnNumber: 17
       }, this);
       weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
-          children: [this.getElementNames(elementsUsed), " Blade"]
+          children: [this.getElementNames(elementsExceptLightning), " Blade"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 535,
+          lineNumber: 562,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 534,
+        lineNumber: 561,
         columnNumber: 17
       }, this);
       self = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
@@ -769,12 +961,66 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           children: ["Use ", this.getElementNames(elementsUsed), " on Self"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 541,
+          lineNumber: 568,
           columnNumber: 21
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 540,
+        lineNumber: 567,
+        columnNumber: 17
+      }, this);
+    } else {
+      // Spray
+      forward = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
+          children: [this.getElementNames(elementsUsed), " Spray"]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 577,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 576,
+        columnNumber: 17
+      }, this);
+      area = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
+          children: [this.getElementNames(elementsUsed), " Area Spray"]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 583,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 582,
+        columnNumber: 17
+      }, this);
+      weapon = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
+          children: [this.getElementNames(elementsUsed), " Blade"]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 589,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 588,
+        columnNumber: 17
+      }, this);
+      self = /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h4", {
+          children: ["Use ", this.getElementNames(elementsUsed), " on Self"]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 595,
+          columnNumber: 21
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 594,
         columnNumber: 17
       }, this);
     }
@@ -787,7 +1033,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         style: {
           paddingLeft: '5px',
           paddingRight: '5px',
-          width: '100px'
+          flexShrink: 0
         },
         children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
           style: {
@@ -809,11 +1055,11 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             }
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 550,
+            lineNumber: 604,
             columnNumber: 39
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 562,
+            lineNumber: 616,
             columnNumber: 34
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("input", {
             type: "checkbox",
@@ -828,13 +1074,13 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             }
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 563,
+            lineNumber: 617,
             columnNumber: 25
           }, this), " Use Poison", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
             children: "Spell Bar"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 575,
+            lineNumber: 629,
             columnNumber: 25
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
             style: {
@@ -845,12 +1091,12 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
               alt: `${element.name}`
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 577,
+              lineNumber: 631,
               columnNumber: 67
             }, this))
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 576,
+            lineNumber: 630,
             columnNumber: 25
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("button", {
             onClick: () => {
@@ -861,24 +1107,24 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             children: "Clear"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 579,
+            lineNumber: 633,
             columnNumber: 25
           }, this)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 549,
+          lineNumber: 603,
           columnNumber: 21
         }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 581,
+          lineNumber: 635,
           columnNumber: 21
         }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 582,
+          lineNumber: 636,
           columnNumber: 21
         }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 583,
+          lineNumber: 637,
           columnNumber: 21
         }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
           children: [[water, life, shield, cold].slice(0, 4).map(element => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
@@ -892,11 +1138,11 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             alt: `${element.name}`
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 586,
+            lineNumber: 640,
             columnNumber: 29
           }, this)), "QWER", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 596,
+            lineNumber: 650,
             columnNumber: 25
           }, this), [lightning, arcane, earth, fire].slice(0, 4).map(element => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
             style: {
@@ -909,65 +1155,65 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             alt: `${element.name}`
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 598,
+            lineNumber: 652,
             columnNumber: 29
           }, this)), "ASDF", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 608,
+            lineNumber: 662,
             columnNumber: 25
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 609,
+            lineNumber: 663,
             columnNumber: 25
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
             src: "images/Element_steam.webp",
             alt: "steam"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 610,
+            lineNumber: 664,
             columnNumber: 25
           }, this), " = ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
             src: "images/Element_fire.webp",
             alt: "fireImage"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 610,
+            lineNumber: 664,
             columnNumber: 83
           }, this), " + ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
             src: "images/Element_water.webp",
             alt: "water"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 610,
+            lineNumber: 664,
             columnNumber: 144
           }, this), " ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 610,
+            lineNumber: 664,
             columnNumber: 200
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
             src: "images/Element_ice.webp",
             alt: "ice"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 611,
+            lineNumber: 665,
             columnNumber: 25
           }, this), " = ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
             src: "images/Element_cold.webp",
             alt: "coldImage"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 611,
+            lineNumber: 665,
             columnNumber: 79
           }, this), " + ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
             src: "images/Element_water.webp",
             alt: "water"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 611,
+            lineNumber: 665,
             columnNumber: 140
           }, this), " ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("br", {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 611,
+            lineNumber: 665,
             columnNumber: 196
           }, this), this.state.usePoison ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("span", {
             children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
@@ -975,105 +1221,127 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
               alt: "poison"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 612,
+              lineNumber: 666,
               columnNumber: 55
             }, this), " = ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
               src: "images/Element_arcane.webp",
               alt: "arcane"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 612,
+              lineNumber: 666,
               columnNumber: 115
             }, this), " + ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
               src: "images/Element_water.webp",
               alt: "water"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 612,
+              lineNumber: 666,
               columnNumber: 175
             }, this)]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 612,
+            lineNumber: 666,
             columnNumber: 49
           }, this) : '']
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 584,
+          lineNumber: 638,
           columnNumber: 21
         }, this)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 548,
+        lineNumber: 602,
         columnNumber: 17
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         style: {
-          paddingLeft: '15px',
-          paddingRight: '15px'
+          display: 'flex',
+          fontSize: 'smaller'
         },
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
-          children: "Forward Cast"
-        }, void 0, false, {
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+            style: {
+              paddingLeft: '15px',
+              paddingRight: '15px'
+            },
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
+              children: "Forward Cast"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 673,
+              columnNumber: 29
+            }, this), forward]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 672,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+            style: {
+              paddingLeft: '15px',
+              paddingRight: '15px'
+            },
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
+              children: "Area Cast"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 677,
+              columnNumber: 29
+            }, this), area]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 676,
+            columnNumber: 25
+          }, this)]
+        }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 618,
+          lineNumber: 671,
           columnNumber: 21
-        }, this), forward]
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+            style: {
+              paddingLeft: '15px',
+              paddingRight: '15px'
+            },
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
+              children: "Weapon Cast"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 683,
+              columnNumber: 29
+            }, this), weapon]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 682,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+            style: {
+              paddingLeft: '15px',
+              paddingRight: '15px'
+            },
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
+              children: "Self Cast"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 687,
+              columnNumber: 29
+            }, this), self]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 686,
+            columnNumber: 25
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 681,
+          columnNumber: 21
+        }, this)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 617,
-        columnNumber: 17
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        style: {
-          paddingLeft: '15px',
-          paddingRight: '15px'
-        },
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
-          children: "Area Cast"
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 622,
-          columnNumber: 21
-        }, this), area]
-      }, void 0, true, {
-        fileName: _jsxFileName,
-        lineNumber: 621,
-        columnNumber: 17
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        style: {
-          paddingLeft: '15px',
-          paddingRight: '15px'
-        },
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
-          children: "Weapon Cast"
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 626,
-          columnNumber: 21
-        }, this), weapon]
-      }, void 0, true, {
-        fileName: _jsxFileName,
-        lineNumber: 625,
-        columnNumber: 17
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-        style: {
-          paddingLeft: '15px',
-          paddingRight: '15px'
-        },
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("h3", {
-          children: "Self Cast"
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 630,
-          columnNumber: 21
-        }, this), self]
-      }, void 0, true, {
-        fileName: _jsxFileName,
-        lineNumber: 629,
+        lineNumber: 670,
         columnNumber: 17
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 547,
+      lineNumber: 601,
       columnNumber: 13
     }, this);
   }
@@ -1160,4 +1428,4 @@ if (true) {
 /***/ })
 
 })
-//# sourceMappingURL=main.99bb7bb570dbf6beb8be.hot-update.js.map
+//# sourceMappingURL=main.a3da1781700a64c78423.hot-update.js.map
