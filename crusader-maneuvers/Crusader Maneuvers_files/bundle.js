@@ -23,50 +23,80 @@ var _jsxFileName = "D:\\Code\\crusader-cards\\src\\App.tsx",
 
 
 
-const maneuvers = [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-  children: "Crusader's Strike"
-}, void 0, false), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-  children: "Vanguard Strike"
-}, void 0, false), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-  children: "Charging Minotaur (Full Round)"
-}, void 0, false), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-  children: "Douse the Flames"
-}, void 0, false), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-  children: "Leading the Attack"
-}, void 0, false)];
+const initialManeuvers = [`Crusader's Strike`, `Vanguard Strike`, `Charging Minotaur (Full Round)`, `Douse the Flames`, `Leading the Attack`];
 
 function App() {
   _s();
 
-  const [withheld, setWithheld] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([...maneuvers]);
-  const [granted, setGranted] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
-  const [expended, setExpended] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
-  const [grantedCount, setGrantedCount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(2);
+  const [state, setState] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    withheld: [],
+    granted: [],
+    expended: [],
+    maneuverList: [],
+    known: [],
+    readied: initialManeuvers,
+    grantedCount: 2
+  });
+  const {
+    withheld,
+    granted,
+    expended,
+    maneuverList,
+    known,
+    readied,
+    grantedCount
+  } = state;
 
   const drawWithheld = () => {
-    const index = Math.floor(Math.random() * withheld.length);
-    setGranted(granted => [...granted, withheld[index]]);
-    setWithheld(withheld => [...withheld.slice(0, index), ...withheld.slice(index + 1)]);
+    setState(state => {
+      const index = Math.floor(Math.random() * state.withheld.length);
+      const {
+        granted,
+        withheld
+      } = state;
+      return { ...state,
+        granted: [...granted, withheld[index]],
+        withheld: [...withheld.slice(0, index), ...withheld.slice(index + 1)]
+      };
+    });
   };
 
-  const refresh = () => {
-    setExpended([]);
-    let tempWithheld = [...maneuvers];
-    let tempGranted = [];
+  const refresh = changes => {
+    setState(state => {
+      var _changes$grantedCount, _changes$readied;
 
-    for (let i = 0; i < grantedCount; i++) {
-      const index = Math.floor(Math.random() * tempWithheld.length);
-      tempGranted = [...tempGranted, tempWithheld[index]];
-      tempWithheld = [...tempWithheld.slice(0, index), ...tempWithheld.slice(index + 1)];
-    }
+      const grantedCount = (_changes$grantedCount = changes === null || changes === void 0 ? void 0 : changes.grantedCount) !== null && _changes$grantedCount !== void 0 ? _changes$grantedCount : state.grantedCount;
+      const readied = (_changes$readied = changes === null || changes === void 0 ? void 0 : changes.readied) !== null && _changes$readied !== void 0 ? _changes$readied : state.readied;
+      let tempWithheld = [...readied];
+      let tempGranted = [];
 
-    setGranted(tempGranted);
-    setWithheld(tempWithheld);
+      for (let i = 0; i < grantedCount && tempWithheld.length > 0; i++) {
+        const index = Math.floor(Math.random() * tempWithheld.length);
+        tempGranted = [...tempGranted, tempWithheld[index]];
+        tempWithheld = [...tempWithheld.slice(0, index), ...tempWithheld.slice(index + 1)];
+      }
+
+      return { ...state,
+        expended: [],
+        granted: tempGranted,
+        withheld: tempWithheld,
+        readied,
+        grantedCount
+      };
+    });
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     refresh();
   }, []);
+  const transparentButton = {
+    backgroundColor: 'transparent',
+    backgroundRepeat: 'no-repeat',
+    border: 'none',
+    cursor: 'pointer',
+    overflow: 'hidden',
+    outline: 'none'
+  };
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
       style: {
@@ -78,90 +108,95 @@ function App() {
           children: "Withheld"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 57,
+          lineNumber: 93,
           columnNumber: 9
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("ul", {
           children: withheld.map((maneuver, index) => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("li", {
             children: maneuver
           }, index, false, {
             fileName: _jsxFileName,
-            lineNumber: 59,
+            lineNumber: 95,
             columnNumber: 46
           }, this))
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 58,
+          lineNumber: 94,
           columnNumber: 9
         }, this)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 56,
+        lineNumber: 92,
         columnNumber: 7
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
         children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("h2", {
           children: "Granted"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 63,
+          lineNumber: 99,
           columnNumber: 9
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("ul", {
           children: granted.map((maneuver, index) => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("li", {
             children: [maneuver, " ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("button", {
               onClick: () => {
-                setGranted(granted => [...granted.slice(0, index), ...granted.slice(index + 1)]);
-                setExpended(expended => [...expended, maneuver]);
+                setState(state => {
+                  const {
+                    granted,
+                    expended
+                  } = state;
+                  return { ...state,
+                    granted: [...granted.slice(0, index), ...granted.slice(index + 1)],
+                    expended: [...expended, maneuver]
+                  };
+                });
               },
               children: "Use"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 65,
+              lineNumber: 101,
               columnNumber: 72
             }, this)]
           }, index, true, {
             fileName: _jsxFileName,
-            lineNumber: 65,
+            lineNumber: 101,
             columnNumber: 45
           }, this))
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 64,
+          lineNumber: 100,
           columnNumber: 9
         }, this)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 62,
+        lineNumber: 98,
         columnNumber: 7
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
         children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("h2", {
           children: "Expended"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 72,
+          lineNumber: 114,
           columnNumber: 9
         }, this), expended.map((maneuver, index) => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("li", {
           children: maneuver
         }, index, false, {
           fileName: _jsxFileName,
-          lineNumber: 73,
+          lineNumber: 115,
           columnNumber: 44
         }, this))]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 71,
+        lineNumber: 113,
         columnNumber: 7
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 91,
       columnNumber: 5
     }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
       children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("button", {
         onClick: () => {
           if (withheld.length === 0) {
             refresh();
-          } else if (withheld.length === maneuvers.length) {
-            drawWithheld();
-            drawWithheld();
           } else {
             drawWithheld();
           }
@@ -169,31 +204,156 @@ function App() {
         children: "Next Turn"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 78,
+        lineNumber: 120,
         columnNumber: 7
       }, this)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 119,
       columnNumber: 5
     }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
       children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("button", {
-        onClick: refresh,
+        onClick: () => refresh(),
         children: "Refresh"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 92,
+        lineNumber: 131,
         columnNumber: 7
       }, this)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 130,
+      columnNumber: 5
+    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("label", {
+        style: {
+          marginRight: 5
+        },
+        children: "Initial granted manuevers:"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 134,
+        columnNumber: 7
+      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("input", {
+        type: "number",
+        value: grantedCount,
+        onChange: e => {
+          refresh({
+            grantedCount: +e.target.value
+          });
+        }
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 135,
+        columnNumber: 7
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 133,
+      columnNumber: 5
+    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("h2", {
+        children: "Readied"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 143,
+        columnNumber: 7
+      }, this), readied.map((maneuver, index) => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("input", {
+          style: {
+            width: 400
+          },
+          value: maneuver,
+          onChange: e => {
+            refresh({
+              readied: [...readied.slice(0, index), e.target.value, ...readied.slice(index + 1)]
+            });
+          }
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 145,
+          columnNumber: 9
+        }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("button", {
+          style: transparentButton,
+          onClick: () => {
+            refresh({
+              readied: [...readied.slice(0, index), ...readied.slice(index + 1)]
+            });
+          },
+          children: "\u2796"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 148,
+          columnNumber: 9
+        }, this)]
+      }, index, true, {
+        fileName: _jsxFileName,
+        lineNumber: 144,
+        columnNumber: 41
+      }, this)), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("button", {
+        style: transparentButton,
+        onClick: () => {
+          refresh({
+            readied: [...readied, '']
+          });
+        },
+        children: "\u2795"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 157,
+        columnNumber: 7
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 142,
+      columnNumber: 5
+    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
+      style: {
+        marginTop: '20px'
+      },
+      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("button", {
+        style: {
+          marginLeft: '5px',
+          marginRight: '5px'
+        },
+        onClick: () => {
+          const input = window.prompt('Paste a JSON object exported with this');
+
+          if (input != null) {
+            const state = JSON.parse(input);
+            setState(state);
+          }
+        },
+        children: "Import"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 169,
+        columnNumber: 7
+      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("button", {
+        style: {
+          marginLeft: '5px',
+          marginRight: '5px'
+        },
+        onClick: () => {
+          const stringified = JSON.stringify(state);
+          const parsed = JSON.parse(stringified);
+          prompt('Copy to clipboard: Ctrl/Command + C', `${JSON.stringify(parsed)}`);
+        },
+        children: "Export"
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 176,
+        columnNumber: 7
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 168,
       columnNumber: 5
     }, this)]
   }, void 0, true);
 }
 
-_s(App, "9fLaxrlxw7KdfDIxwv/hBmZjWHU=");
+_s(App, "AdOJ6QQUbmvhraou0dOrfX6J+To=");
 
 _c = App;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -41993,7 +42153,7 @@ if (true) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("2b21a76513325ee21338")
+/******/ 		__webpack_require__.h = () => ("b108327e8f714fe8ec4e")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
