@@ -182,7 +182,6 @@ function App() {
           columnNumber: 9
         }, this), expended.map((maneuver, index) => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("li", {
           children: [maneuver, " ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("button", {
-            style: transparentButton,
             onClick: () => {
               setState(state => {
                 const {
@@ -190,8 +189,8 @@ function App() {
                   expended
                 } = state;
                 return { ...state,
-                  granted: [...expended.slice(0, index), ...expended.slice(index + 1)],
-                  expended: [...granted, maneuver]
+                  expended: [...expended.slice(0, index), ...expended.slice(index + 1)],
+                  granted: [...granted, maneuver]
                 };
               });
             },
@@ -58091,7 +58090,7 @@ if (true) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("2dd1ed1e8e3a817450ba")
+/******/ 		__webpack_require__.h = () => ("d6f5d316a5957bf77673")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
