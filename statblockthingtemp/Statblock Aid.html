@@ -895,18 +895,32 @@ plus ', string(size-4));
 flightManeuverability(x) = x &lt;= 0 ? 'Clumsy' : x == 1 ? 'Average' : x
  == 2 ? 'Good' : 'Perfect';
 
-bigWeapon(x) = (3-(x%2))*(2^(floor((x+1)/2,0)-4));
+bigWeaponProg(x) = (3-(x%2))*(2^(floor((x+1)/2,0)-4));
 
-longSword(x) = x &lt;= 0 ? '—' : x == 1 ? '1' : x == 2 ? '1d2' : x == 3 ?
- '1d3' : x == 4 ? '1d4' : x == 5 ? '1d6' : x == 6 ? '1d8' : x == 7 ? 
-'2d6' : x == 8 ? '3d6' : x == 9 ? '4d6' : x == 10 ? '6d6' : 
-concat(string(bigWeapon(x)),'d6');
+longSwordProg(x) = x &lt;= 0 ? '—' : x == 1 ? '1' : x == 2 ? '1d2' : x 
+== 3 ? '1d3' : x == 4 ? '1d4' : x == 5 ? '1d6' : x == 6 ? '1d8' : x == 7
+ ? '2d6' : x == 8 ? '3d6' : x == 9 ? '4d6' : x == 10 ? '6d6' : 
+concat(string(bigWeaponProg(x)),'d6');
+falchionProg(x) = x == 6 ? '2d4' : longswordProg(x);
+bastardSwordProg(x) = x &lt;= 6 ? longSwordProg(x) : x == 7 ? '1d10' : x
+ == 8 ? '2d8' : x == 9 ? '3d8' : x == 10 ? '4d8' : x == 11 ? '6d8' : 
+concat(string(bigWeaponProg(x)),'d8');
+slamProg(x) = x &lt;= 0 ? '—' : x &lt;= 2 ? '1' : x == 8 ? '2d8' : 
+longSwordProg(x);
+biteProg(x) = x == 8 ? '2d8' : longSwordProg(x);
 
-falchion(x) = x == 6 ? '2d4' : longsword(x);
+longSword(x) = longSwordProg(x+6);
+bastardSword(x) = bastardSwordProg(x+7);
+slam(x) = slamProg(x+4);
+tentacle(x) = slam(x);
+bite(x) = biteProg(x+5);
+claw(x) = bite(x-1);
+sting(x) = claw(x);
+gore(x) = x &lt;= -4 ? '—' : x &lt;= -2 ? claw(x) : claw(x+1);
+tail(x) = gore(x);
 
-bastardSword(x) = x &lt;= 6 ? longSword(x) : x == 7 ? '1d10' : x == 8 ? 
-'2d8' : x == 9 ? '3d8' : x == 10 ? '4d8' : x == 11 ? '6d8' : 
-concat(string(bigWeapon(x)),'d8');
+
+
 
 hpDiff = round(hp - hpFromHD);
 hpString = isNaN(hp) ? '—' : hpDiff == 0 ? concat(hitDiceString, ' (', 
@@ -934,10 +948,10 @@ string(floor(num)));</textarea><div><svg aria-hidden="true" focusable="false" da
 |**Speed:**| {landSpeed} ft. ({floor(landSpeed/5)} squares)|
 |**Armor Class:**| {flatfootedAC + touchAC - flatfootedTouchAC}, touch {touchAC}, flat-footed {flatfootedAC}|
 |**Base Attack/Grapple:**| {prependWithPlus(bab)}/{prependWithPlus(grapple)}|
-|**Attack:**| Bastard Sword {prependWithPlus(baseMeleeAttack)} ({bastardSword(7+size)})|
-||or Crossbow, Light {prependWithPlus(baseRangedAttack)} ({longSword(6+size)})|
-|**Roll20:**| Bastard Sword [[d20{prependWithPlus(baseMeleeAttack)}]] [[{bastardSword(7+size)}]]|
-|| Crossbow, Light [[d20{prependWithPlus(baseRangedAttack)}]] [[{longSword(6+size)}]]|
+|**Attack:**| Bastard Sword {prependWithPlus(baseMeleeAttack)} ({bastardSword(size)})|
+||or Crossbow, Light {prependWithPlus(baseRangedAttack)} ({longSword(size)})|
+|**Roll20:**| Bastard Sword [[d20{prependWithPlus(baseMeleeAttack)}]] [[{bastardSword(size)}]]|
+|| Crossbow, Light [[d20{prependWithPlus(baseRangedAttack)}]] [[{longSword(size)}]]|
 |**Full Attack:**| |
 |**Space/Reach:**| {creatureSpace(size)}/{tallReach(size)} |
 |**Special Attacks:**| |
