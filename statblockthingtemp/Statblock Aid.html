@@ -911,16 +911,12 @@ biteProg(x) = x == 8 ? '2d8' : longSwordProg(x);
 
 longSword(x) = longSwordProg(x+6);
 bastardSword(x) = bastardSwordProg(x+7);
-slam(x) = slamProg(x+4);
-tentacle(x) = slam(x);
-bite(x) = biteProg(x+5);
-claw(x) = bite(x-1);
-sting(x) = claw(x);
-gore(x) = x &lt;= -4 ? '—' : x &lt;= -2 ? claw(x) : claw(x+1);
-tail(x) = gore(x);
+greatAxe(x) = x &lt;= -1 ? bastardSword(x+1) : x == 0 ? '1d12' : 
+longSword(x+1);
 
-
-
+slam(x) = slamProg(x+4);tentacle(x) = slam(x);bite(x) = 
+biteProg(x+5);claw(x) = bite(x-1);sting(x) = claw(x);gore(x) = x &lt;= 
+-4 ? '—' : x &lt;= -2 ? claw(x) : claw(x+1);tail(x) = gore(x);
 
 hpDiff = round(hp - hpFromHD);
 hpString = isNaN(hp) ? '—' : hpDiff == 0 ? concat(hitDiceString, ' (', 
