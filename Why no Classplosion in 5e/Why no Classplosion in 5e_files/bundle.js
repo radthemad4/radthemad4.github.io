@@ -34,17 +34,17 @@ function App() {
 
   const [state, setState] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     page: 1,
-    prevPage: 1
+    prevPages: [1]
   });
   const {
     page,
-    prevPage
+    prevPages
   } = state;
 
   const setPage = page => {
     setState(state => ({
       page: page,
-      prevPage: state.page
+      prevPages: [...state.prevPages, state.page]
     }));
   };
 
@@ -1440,7 +1440,10 @@ function App() {
               children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
                 children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("button", {
                   className: "listlink",
-                  onClick: () => setPage(prevPage),
+                  onClick: () => setState({
+                    page: prevPages[prevPages.length - 1],
+                    prevPages: prevPages.slice(0, -1)
+                  }),
                   children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
                     style: {
                       display: 'inline-flex',
@@ -1449,12 +1452,12 @@ function App() {
                     children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.FaStepBackward, {}, void 0, false, {
                       fileName: _jsxFileName,
                       lineNumber: 376,
-                      columnNumber: 144
+                      columnNumber: 213
                     }, this), " Back"]
                   }, void 0, true, {
                     fileName: _jsxFileName,
                     lineNumber: 376,
-                    columnNumber: 82
+                    columnNumber: 151
                   }, this)
                 }, void 0, false, {
                   fileName: _jsxFileName,
@@ -1468,7 +1471,10 @@ function App() {
               }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
                 children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("button", {
                   className: "listlink",
-                  onClick: () => setPage(1),
+                  onClick: () => setState({
+                    page: 1,
+                    prevPages: [1]
+                  }),
                   children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
                     style: {
                       display: 'inline-flex',
@@ -1477,12 +1483,12 @@ function App() {
                     children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.FaFastBackward, {}, void 0, false, {
                       fileName: _jsxFileName,
                       lineNumber: 379,
-                      columnNumber: 137
+                      columnNumber: 165
                     }, this), " Restart"]
                   }, void 0, true, {
                     fileName: _jsxFileName,
                     lineNumber: 379,
-                    columnNumber: 75
+                    columnNumber: 103
                   }, this)
                 }, void 0, false, {
                   fileName: _jsxFileName,
@@ -1530,7 +1536,7 @@ function App() {
   }, this);
 }
 
-_s(App, "FrnfW7nEzPfPZfVclATpi4ZBs40=");
+_s(App, "TqVkcYEYwv/xoE4DM8kzLTflAOk=");
 
 _c = App;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -72660,7 +72666,7 @@ if (true) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("06ce42d2bb163b475ad1")
+/******/ 		__webpack_require__.h = () => ("cd5ac3692f4cb9e32e02")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
