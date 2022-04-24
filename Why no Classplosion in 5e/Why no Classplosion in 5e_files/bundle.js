@@ -1291,7 +1291,6 @@ function App() {
           borderColor: '#E6E9ED',
           border: '1px solid transparent',
           borderRadius: '8px',
-          minWidth: '625px',
           padding: '15px',
           textAlign: 'left'
         },
@@ -1317,12 +1316,12 @@ function App() {
               children: "Why no Classplosion in 5e?"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 356,
+              lineNumber: 355,
               columnNumber: 15
             }, this)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 350,
+            lineNumber: 349,
             columnNumber: 13
           }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("p", {
             style: {
@@ -1339,12 +1338,12 @@ function App() {
                 color: "#999999"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 366,
+                lineNumber: 365,
                 columnNumber: 100
               }, this)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 366,
+              lineNumber: 365,
               columnNumber: 15
             }, this), " by ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
               target: "_blank",
@@ -1353,12 +1352,12 @@ function App() {
               children: "Username17"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 366,
+              lineNumber: 365,
               columnNumber: 134
             }, this), "  \xBB Wed Apr 08, 2015 8:45 pm"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 358,
+            lineNumber: 357,
             columnNumber: 13
           }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
             className: "Content",
@@ -1370,71 +1369,71 @@ function App() {
                 children: "Classplosion"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 113
               }, this), ". Simply put: 4e's game system simply couldn't handle there ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("em", {
                 className: "text-italics",
                 children: "not"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 297
               }, this), " being over a hundred classes. 4e fucking killed itself by not bringing out the new classes fast and furious.", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("br", {}, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 443
               }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("br", {}, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 449
               }, this), "Now 5th edition is a crap game. But one of the ways it is ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("em", {
                 className: "text-italics",
                 children: "better"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 513
               }, this), " than 4th edition is that it does not ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("em", {
                 className: "text-italics",
                 children: "need"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 591
               }, this), " dozens of new classes. But it still needs ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("em", {
                 className: "text-italics",
                 children: "something"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 672
               }, this), ". They went to print with 12 classes. And that was minimally sufficient to be more than the 3e PHB and make it look like they gave a shit. It did not repeat the mistakes of 4e of producing only 8 classes on release. But after doing that, there's fucking ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("em", {
                 className: "text-italics",
                 children: "nothing"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 969
               }, this), " on the schedule. No new classes.", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("br", {}, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 1043
               }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("br", {}, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 370,
+                lineNumber: 369,
                 columnNumber: 1049
               }, this), "The claim seems to be that producing new sorcerous origins and class kits and shit. This is bullshit. Obviously, they'd need to do something like this:"]
             }, void 0, true, {
               fileName: _jsxFileName,
-              lineNumber: 370,
+              lineNumber: 369,
               columnNumber: 15
             }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("br", {}, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 371,
+              lineNumber: 370,
               columnNumber: 15
             }, this), map[page], /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("br", {}, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 373,
+              lineNumber: 372,
               columnNumber: 15
             }, this), page !== 1 && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
               children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
@@ -1451,22 +1450,22 @@ function App() {
                     },
                     children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.FaStepBackward, {}, void 0, false, {
                       fileName: _jsxFileName,
-                      lineNumber: 376,
+                      lineNumber: 375,
                       columnNumber: 213
                     }, this), " Back"]
                   }, void 0, true, {
                     fileName: _jsxFileName,
-                    lineNumber: 376,
+                    lineNumber: 375,
                     columnNumber: 151
                   }, this)
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 376,
+                  lineNumber: 375,
                   columnNumber: 19
                 }, this)
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 375,
+                lineNumber: 374,
                 columnNumber: 17
               }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
                 children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("button", {
@@ -1482,41 +1481,41 @@ function App() {
                     },
                     children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.FaFastBackward, {}, void 0, false, {
                       fileName: _jsxFileName,
-                      lineNumber: 379,
+                      lineNumber: 378,
                       columnNumber: 165
                     }, this), " Restart"]
                   }, void 0, true, {
                     fileName: _jsxFileName,
-                    lineNumber: 379,
+                    lineNumber: 378,
                     columnNumber: 103
                   }, this)
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 379,
+                  lineNumber: 378,
                   columnNumber: 19
                 }, this)
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 378,
+                lineNumber: 377,
                 columnNumber: 17
               }, this)]
             }, void 0, true, {
               fileName: _jsxFileName,
-              lineNumber: 374,
+              lineNumber: 373,
               columnNumber: 30
             }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("br", {}, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 382,
+              lineNumber: 381,
               columnNumber: 15
             }, this), "- Username17"]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 369,
+            lineNumber: 368,
             columnNumber: 13
           }, this)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 343,
+          lineNumber: 342,
           columnNumber: 11
         }, this)
       }, void 0, false, {
@@ -72666,7 +72665,7 @@ if (true) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("cd5ac3692f4cb9e32e02")
+/******/ 		__webpack_require__.h = () => ("0d8d9c9711bdf76b5dcc")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
